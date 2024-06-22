@@ -1,0 +1,120 @@
+<div class="cont">
+<h1>Tour Filter</h1>
+<div class="audio-card">
+    <h2>Your mood for today</h2>
+    <div class="audio-container">
+      <audio controls>
+        <source src="assets/11.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <div class="audio-card2">
+    <h2>Recognize yourself?</h2>
+    <div class="audio-container2">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG5qbXZmMG4yYzZuc3hvZG8wZ3MxaDVteHdueWUwcnZjcjl6NG9mZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LHZyixOnHwDDy/giphy.gif" alt="img">
+    </div>
+  </div>
+
+<!-- <div class="filter-container" *ngIf="countryList && countryList.length">
+  <div>
+    <label for="country" class="filter-label">Country:</label>
+    <select id="country" [(ngModel)]="selectedCountry">
+      <option value="" selected>Select Country</option>
+      <option *ngFor="let country of countryList" [value]="country.id">{{ country.name }}</option>
+    </select>
+  </div>
+  
+<div *ngIf="selectedCountry">
+    <label for="city" class="filter-label">City:</label>
+    <select id="city" *ngIf="selectedCountry" [(ngModel)]="selectedCity">
+      <option value="">Select City</option>
+      <ng-container *ngFor="let city of cityList">
+        <option *ngIf="city.id_country == selectedCountry" [value]="city.id">{{ city.name }}</option>
+      </ng-container>
+    </select>
+  </div>
+  
+  <div *ngIf="selectedCity">
+    <label for="hotel" class="filter-label">Hotel:</label>
+    <select id="hotel" *ngIf="selectedCity" [(ngModel)]="selectedHotel">
+      <option value="">Select Hotel</option>
+      <ng-container *ngFor="let hotel of hotelList">
+        <option *ngIf="hotel.id_city == selectedCity" [value]="hotel.id">{{ hotel.name }}</option>
+      </ng-container>
+    </select>
+  </div>
+
+
+<div class="card-container">
+  <div class="card" *ngFor="let item of filteredTourList" [routerLink]="['/tours', item.id]">
+    <img [src]="item.image" alt="Tour Image" class="card-image">
+    <div class="card-body">
+      <h3 class="card-title">{{ item.name }}</h3>
+      <p class="card-description">{{ item.description }}</p>
+      <p class="card-price">Price: {{ item.price }}</p>
+      <button (click)="orderTour(item.id)" style="margin-left: 65px;">Замовити</button>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="filter-container" *ngIf="countryList && countryList.length">
+  <div>
+    <label for="country" class="filter-label">Country:</label>
+    <select id="country" [(ngModel)]="selectedCountry">
+      <option value="" selected>Select Country</option>
+      <option *ngFor="let country of countryList" [value]="country.id">{{ country.name }}</option>
+    </select>
+  </div>
+
+  <div *ngIf="selectedCountry">
+    <label for="city" class="filter-label">City:</label>
+    <select id="city" [(ngModel)]="selectedCity">
+      <option value="">Select City</option>
+      <ng-container *ngFor="let city of cityList">
+        <option *ngIf="city.id_country == selectedCountry" [value]="city.id">{{ city.name }}</option>
+      </ng-container>
+    </select>
+  </div>
+
+  <div *ngIf="selectedCity">
+    <label for="hotel" class="filter-label">Hotel:</label>
+    <select id="hotel" [(ngModel)]="selectedHotel">
+      <option value="">Select Hotel</option>
+      <ng-container *ngFor="let hotel of hotelList">
+        <ng-container *ngIf="hotel.id_city == selectedCity">
+          <option [value]="hotel.id">{{ hotel.name }}</option>
+        </ng-container>
+      </ng-container>
+    </select>
+  </div>
+</div>
+
+<div class="card-container">
+  <ng-container *ngFor="let item of filteredTourList">
+    <div *ngIf="item.id_hotel == selectedHotel" class="card" [routerLink]="['/tours', item.id]">
+      <img [src]="item.image" alt="Tour Image" class="card-image">
+      <div class="card-body">
+        <h3 class="card-title">{{ item.name }}</h3>
+        <p class="card-description">{{ item.description }}</p>
+        <p class="card-price">Price: {{ item.price }}</p>
+        <button (click)="orderTour(item.id)" style="margin-left: 65px;">Замовити</button>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<!-- <div class="loader-container" *ngIf="filteredTourList.length > 0">
+  <span class="loader"></span>
+  <img src="assets/cat.png" alt="Cat">
+<span class="loader"></span>
+</div> -->
+
+
+
+</div>
+
+
+
+

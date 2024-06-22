@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* section {
+    padding: 60px 0;
+    min-height: 100vh;
+} */
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    outline: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #002423;
+  padding: 5px 0;
+  z-index: 10;
+}
+
+.footer-content {
+    padding: 0px 15px;
+}
+
+.footer-content:before{
+  position: absolute;
+  content: '';
+  background: url(https://i.ibb.co/jyRLrBZ/world-map.png);
+  width: 70%;
+  max-height: 83%;
+  top: 30px;
+  right: 0px;
+  background-repeat: no-repeat;
+}
+
+.footer-content .row {
+    display: flex; 
+    justify-content: space-between; 
+  }
+
+.footer-content .logo-widget{
+  position: relative;
+  margin-top: -5px;
+}
+
+.footer-content .logo-widget .footer-social li{
+  position: relative;
+  display: inline-block;
+  margin-right: 9px;
+}
+
+.footer-content .logo-widget .footer-social li a:hover{
+  color: #ffffff;
+  background: #ff5e14;
+}
+
+.footer-content .logo-widget .logo-box{
+  display: inline-block; 
+  vertical-align: top; 
+  margin-right: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: bisque;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative; 
+  top: 5px;
+}
+
+.footer-content .logo-widget .logo-box img{
+    width: 170px;
+}
+
+.footer-content .logo-widget .text p{
+  color: bisque;
+  margin-bottom: 32px;
+}
+.footer-content .footer-title{
+  position: relative;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: bisque;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.footer-content .service-widget .list li{
+  display: block;
+  margin-bottom: 12px;
+}
+.footer-content .service-widget .list li a{
+  position: relative;
+  display: inline-block;
+  color: #9ea0a9;
+}
+.footer-content .service-widget .list li a:hover{
+  color: tomato;
+}
+.footer-content .contact-widget p{
+  color: #9ea0a9;
+  margin-bottom: 15px;
+  position: relative;
+}
+.footer-content .contact-widget{
+  margin-left: 52px;
+}

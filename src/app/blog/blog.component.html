@@ -1,0 +1,65 @@
+<div class="cont">
+
+    <div *ngIf="weatherData" class="weather" id="weather">
+
+        <video id="weather-video" autoplay>
+          <source src="assets/mVid.mp4" type="video/mp4">
+        </video>
+      
+      <div class="weather-head">
+          <div class="weather-main">
+              <div class="weather-city">{{ weatherData.name }}</div>
+              <div class="weather-stat">{{ weatherData.weather[0].description }}</div>
+              <div class="weather-temp">{{ weatherData.main.temp | number: '1.0-0' }}°C</div>
+              <div class="weather-feels">Відчувається як: {{ weatherData.main.feels_like | number: '1.0-0' }}°C</div>
+          </div>
+          <div class="weather-icon">
+            <img src="http://openweathermap.org/img/wn/{{ weatherData.weather[0].icon }}.png" alt="Погодна іконка">
+          </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="article">
+        <img src="https://images.unian.net/photos/2024_01/thumb_files/1000_545_1705056028-8616.jpg?1" alt="Подорож 1">
+        <div class="content">
+            <h2>Найкращі місця для подорожей у 2024 році</h2>
+            <p>Природне диво, пустеля серед Європи — так красномовно описують Олешківські піски медіа. Дослідники вважають ці піщані масиви напівпустелею, поява якої зумовлена природними процесами, а розвиток — господарською діяльністю людини. Олешківські піски — це унікальна для півдня України природна зона, де...</p>
+            <a href="https://www.ukrainer.net/thread/pamyatky/?gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRhzpyzj-glWoQWugNFAibfyeV-qo0i6n4BYqyQhDm_AxCykGNihLRzxoCRkIQAvD_BwE">Докладніше</a>
+        </div>
+    </div>
+
+    <div class="article">
+        <img src="https://www.more-turiv.com.ua/wp-content/uploads/2022/11/1-1.jpg" alt="img">
+        <div class="content">
+            <h2>Як зекономити на подорожах: поради і трюки</h2>
+            <p>Одне і те ж подорож може обійтися вам в 800 євро, а може і в 400 без шкоди для вашого комфорту. При цьому ви отримаєте ті ж враження, побачите ті ж місця, насолодитися місцевою кухнею і проведете чудовий відпустка – тільки в два рази дешевше.</p>
+            <a href="https://tripmydream.ua/media/layfhak/7-sekretov-kak-sekonomit-do-50-bjudzheta-poezdki">Докладніше</a>
+        </div>
+    </div>
+
+    <div class="article">
+        <img src="https://discover.in.ua/uploads/illustrations-2/azorski-ostrovi-portugalija.jpg" alt="Подорож 3">
+        <div class="content">
+            <h2>10 найбільш незвичайних місць світу</h2>
+            <p>Дивлячись на фото, складно уявити, що все, що на них зображено, — творіння природи і знаходиться на нашій планеті. Пропонуємо переконатися в цьому особисто, спланувавши подорож до одного з неймовірних місць нашого списку.</p>
+            <a href="https://tripmydream.ua/media/podborki/10-mest-slovno-s-drugoy-planety">Докладніше</a>
+        </div>
+    </div>
+
+    <div class="article">
+        <img src="https://blog.mydutyfree.net/images/uploaded/18.03.21%20Economy%20travel/2.jpg" alt="Подорож 4">
+        <div class="content">
+            <h2>Подорож на бюджеті: де жити, що їсти, як економити</h2>
+            <p>Подорожі — одна з найприємніших речей, які ми можемо дозволити собі в житті. Побачити світ, різні культури, пам’ятки природи та архітектури, познайомитися з новими людьми — все це надихає та заряджає. Однак щороку подорожі стають все дорожчими.</p>
+            <a href="https://vikna.tv/styl-zhyttya/podorozhi/yak-byudzhetno-podorozhuvaty-sekrety-ekonomiyi-na-prozhyvanni-ta-kvytkah/">Докладніше</a>
+        </div>
+    </div>
+</div>
+
+
+
